@@ -26,7 +26,7 @@ int main (int argc, char *argv[])
         for (int i = 0; i < size; i++)
         {
             MPI_Recv(&(return_values[i]), 1, MPI_INT, i, 0, MPI_COMM_WORLD, &status);
-            printf("Primary rank received %d from rank %d \n", retrun_values[i], i);
+            printf("Primary rank received %d from rank %d \n", return_values[i], i);
         }
     }
     else
