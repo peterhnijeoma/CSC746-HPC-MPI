@@ -18,8 +18,8 @@ int main (int argc, char *argv[])
 
     //everyone participates in MPI_Bcast.
     int sender_rank = 0;
-    MPI_Bcast(&the_number, 1, MPI_INT, sender_ransk, MPI_COMM_WORLD);
-    
+    MPI_Bcast(&the_number, 1, MPI_INT, sender_rank, MPI_COMM_WORLD);
+
     // now the receivers will add one to the number and send results back to primary
     if (rank != 0)
     {
