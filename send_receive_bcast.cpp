@@ -23,7 +23,7 @@ int main (int argc, char *argv[])
     // now the receivers will add one to the number and send results back to primary
     if (rank != 0)
     {
-        printf("I am rank %d of %d total ranks, I am sending %d to all the other ranks.\n", rank, size, the_number);
+        printf("I am rank %d of %d total ranks, and I received %d from rank zero.\n", rank, size, the_number);
         
         // now add rank to the received number and send ot back to the primary
         the_number += rank;
